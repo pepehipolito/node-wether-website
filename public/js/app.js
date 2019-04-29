@@ -1,5 +1,3 @@
-console.log('The JS file got loaded');
-
 function getWeather(address) {
   fetch(`http://localhost:3000/weather?address=${encodeURIComponent(address)}`).then(response => {
     response.json().then(data => {
