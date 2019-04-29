@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <div class="main-content">
+      <!--
+        handlebars uses double curly braces and the name of a partial preceded by a '>' sign to
+        render a partial.
+      -->
+      {{>header}}
+      <img class="portrait" src="/img/homer.jpg" />
+    </div>
+
+    {{>footer}}
+  </body>
+</html>

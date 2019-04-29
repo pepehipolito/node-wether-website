@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <div class='main-content'>
+      <!--
+        handlebars uses double curly braces and the name of a partial preceded by a '>' sign to
+        render a partial.
+      -->
+      {{>header}}
+      <p>Use this site to get yor weather!</p>
+
+      <form>
+        <input type="search" placeholder="Location" />
+        <button>Search</button>
+      </form>
+
+      <p id="error"></p>
+      <p id="forecast"></p>
+    </div>
+
+    {{>footer}}
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

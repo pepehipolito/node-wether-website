@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Not Found</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <div class="main-content">
+      <!--
+        handlebars uses double curly braces and the name of a partial preceded by a '>' sign to
+        render a partial.
+      -->
+      {{>header}}
+      <!--
+        handlebars uses double curly braces to interpolate values passed to the template.
+      -->
+      <p>{{message}}</p>
+    </div>
+
+    {{>footer}}
+  </body>
+</html>
