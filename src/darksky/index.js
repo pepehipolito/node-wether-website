@@ -16,8 +16,9 @@ const getWeather = (data, callback) => {
       callback(response.body.error);
     } else {
       const { temperature, precipProbability } = response.body.currently;
-      const { summary } = response.body.daily.data[0];
-      callback(undefined, { summary, temperature, precipProbability });
+      const data = response.body.daily.data[0];
+      const { summary, temperatureHigh, temperatureLow } = data;
+      callback(undefined, { precipProbability, temperature, temperatureHigh, temperatureLow, summary });
     }
   });
 };

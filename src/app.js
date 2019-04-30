@@ -98,12 +98,12 @@ app.get('/weather', (req, res) => {
       if (error) return res.send({ error });
 
       const { placeName } = data;
-      const { precipProbability, temperature, summary } = response;
+      const { precipProbability, temperature, temperatureHigh, temperatureLow, summary } = response;
 
       res.send({
         address,
         location: placeName,
-        forecast: `${summary} It is currently ${temperature} degrees out and there is a ${precipProbability}% chance of rain in ${placeName}.`
+        forecast: `${summary} It is currently ${temperature} degrees out and there is a ${precipProbability}% chance of rain in ${placeName}. The low for the day is expected to be ${temperatureLow} and the maximum for the day is expected to be ${temperatureHigh}.`
       });
     });
   });
