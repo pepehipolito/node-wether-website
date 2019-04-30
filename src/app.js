@@ -6,6 +6,7 @@ const getCoordinates = require('./mapbox/index');
 const getWeather = require('./darksky/index');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths for express config.
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -147,6 +148,6 @@ app.get('*', (req, res) => {
 // In order to start the server we need to start it from the command line: node <path>/app.js.
 // But in order to see changes we would need to restart the server from the command line every time.
 // A better approach is to use nodemon: nodemon <path>/app.js
-app.listen(3000, () => {
-  console.log('Server is up on port 3000.');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}.`);
 });
